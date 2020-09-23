@@ -1,0 +1,18 @@
+﻿<Window x:Class="Vorlesung_09.Dimensions"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Dimensions"
+        Height="Auto"
+        Width="400">
+    <StackPanel Margin="5">
+        <Label Width="Auto" Height="96" Content="96" Background="LightBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Width="Auto" Height="96px" Content="96px" Background="LightGreen" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Width="Auto" Height="1in" Content="1in" Background="LightYellow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Width="Auto" Height="2.54cm" Content="2.54cm" Background="LightPink" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Width="Auto" Height="72pt" Content="72pt" Background="LightSteelBlue" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label Width="Auto" Height="Auto" Content="Auto" Background="LightCoral" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    </StackPanel>
+</Window>

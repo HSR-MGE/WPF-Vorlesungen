@@ -1,0 +1,46 @@
+﻿<Window x:Class="Vorlesung_09.Alignment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Vorlesung_09"
+      mc:Ignorable="d" 
+      Width="800"
+      Height="400"
+      Title="Alignment">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="0" Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Left / Top" />
+        <Button Grid.Row="0" Grid.Column="1" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Top" Content="Center / Top" />
+        <Button Grid.Row="0" Grid.Column="2" Width="Auto" Height="Auto" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Right / Top" />
+        <Button Grid.Row="0" Grid.Column="3" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Top" Content="Stretch / Top" />
+
+        <Button Grid.Row="1" Grid.Column="0" Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Center" Content="Left / Center" />
+        <Button Grid.Row="1" Grid.Column="1" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Center / Center" />
+        <Button Grid.Row="1" Grid.Column="2" Width="Auto" Height="Auto" HorizontalAlignment="Right" VerticalAlignment="Center" Content="Right / Center" />
+        <Button Grid.Row="1" Grid.Column="3" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Center" Content="Stretch / Center" />
+
+        <Button Grid.Row="2" Grid.Column="0" Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="Left / Bottom" />
+        <Button Grid.Row="2" Grid.Column="1" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Bottom" Content="Center / Bottom" />
+        <Button Grid.Row="2" Grid.Column="2" Width="Auto" Height="Auto" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Right / Bottom" />
+        <Button Grid.Row="2" Grid.Column="3" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Content="Stretch / Bottom" />
+
+        <Button Grid.Row="3" Grid.Column="0" Width="Auto" Height="Auto" HorizontalAlignment="Left" VerticalAlignment="Stretch" Content="Left / Stretch" />
+        <Button Grid.Row="3" Grid.Column="1" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Stretch" Content="Center / Stretch" />
+        <Button Grid.Row="3" Grid.Column="2" Width="Auto" Height="Auto" HorizontalAlignment="Right" VerticalAlignment="Stretch" Content="Right / Stretch" />
+        <Button Grid.Row="3" Grid.Column="3" Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Content="Stretch / Stretch" />
+    </Grid>
+</Window>
