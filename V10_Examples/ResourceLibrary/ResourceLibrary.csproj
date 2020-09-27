@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Bilder\OST-Logo-Lib.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Bilder\OST-Logo-Lib.jpg" />
+  </ItemGroup>
+
+</Project>

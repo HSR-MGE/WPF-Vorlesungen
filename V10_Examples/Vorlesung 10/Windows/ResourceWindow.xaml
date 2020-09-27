@@ -1,0 +1,58 @@
+﻿<Window x:Class="Vorlesung_10.Windows.ResourceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:system="clr-namespace:System;assembly=System.Runtime"
+        xmlns:local="clr-namespace:Vorlesung_10.Resources"
+        mc:Ignorable="d"
+        Title="Resources" Height="400" Width="250">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="OSTBrush" Color="#6E1C50" />
+
+            <system:Double x:Key="MarginVertical">2</system:Double>
+            <system:Double x:Key="MarginHorizontal">5</system:Double>
+
+            <Thickness x:Key="Margin" Top="{StaticResource MarginVertical}"
+                                         Bottom="{StaticResource MarginVertical}"
+                                         Left="{StaticResource MarginHorizontal}"
+                                         Right="{StaticResource MarginHorizontal}" />
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Resources/MyDictionary.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/ResourceLibrary;component/Resources/ExternalResources.xaml" />
+                <ResourceDictionary Source="pack://siteoforigin:,,,/Resources/SiteOfOriginDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <StackPanel>
+        <Button Content="Update Resource" Click="UpdateDynamicResource" />
+
+        <Label Content="Variante 1 (Lokal)" Foreground="White" Margin="{StaticResource Margin}">
+            <Label.Background>
+                <StaticResource ResourceKey="OSTBrush" />
+            </Label.Background>
+        </Label>
+
+        <Label Content="Variante 2 (Lokal + Merged) " Foreground="White" Background="{StaticResource ResourceKey=OSTBrush2}" />
+
+        <Label Content="Variante 3 (ResourceLibrary + Merged)" Foreground="White" Background="{StaticResource OSTBrush3}" />
+
+        <Label Content="Variante 4 (SiteOfOrigin + Merged)" Foreground="White" Background="{StaticResource OSTBrush99}" />
+
+        <Label Content="Variante 5 (Lokal + Dynamic)" Foreground="White" Background="{DynamicResource OSTBrush}" />
+
+        <Image Source="/ResourceLibrary;component/Bilder/OST-Logo-Lib.jpg" Height="80" />
+
+        <Image Source="pack://siteoforigin:,,,/Bilder/OST-Logo-SiteOfOrigin.jpg" Height="80" />
+
+        <Label Content="x:Static"
+               Background="{x:Static local:StaticResources.OSTBrush}"
+               Foreground="{x:Static SystemColors.ControlLightBrush}"
+               FontFamily="{x:Static SystemFonts.CaptionFontFamily}"
+               FontSize="{x:Static SystemFonts.CaptionFontSize}" />
+    </StackPanel>
+</Window>

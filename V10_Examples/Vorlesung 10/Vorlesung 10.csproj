@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Vorlesung_10</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="OST-Logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Resources\SiteOfOriginDictionary.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\SiteOfOriginDictionary.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ResourceLibrary\ResourceLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Bilder\OST-Logo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Bilder\OST-Logo-SiteOfOrigin.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
