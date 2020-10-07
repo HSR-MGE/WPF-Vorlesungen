@@ -1,0 +1,18 @@
+﻿<Window x:Class="Multilanguage.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:t="clr-namespace:Multilanguage.RESX"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="{DynamicResource Key1}" />
+        <TextBlock Text="{DynamicResource Key2}" />
+        <TextBlock Text="{x:Static t:Translations.Key1}" />
+        <TextBlock Text="{x:Static t:Translations.Key2}" />
+
+        <Button Content="Load DE" Click="ButtonDE_OnClick" />
+        <Button Content="Load EN" Click="ButtonEN_OnClick" />
+    </StackPanel>
+</Window>

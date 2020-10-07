@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key="Key1">Resource Dictionary 1 (DE)</system:String>
+    <system:String x:Key="Key2">Resource Dictionary 2 (DE)</system:String>
+</ResourceDictionary>

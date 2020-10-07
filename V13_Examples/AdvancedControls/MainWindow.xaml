@@ -1,0 +1,17 @@
+﻿<Window x:Class="AdvancedControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdvancedControls"
+        xmlns:cc="clr-namespace:AdvancedControls.CustomControl"
+        xmlns:uc="clr-namespace:AdvancedControls.UserControl"
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=local:MainWindow, IsDesignTimeCreatable=True}"
+        Title="MainWindow" Height="140" Width="150">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+        <cc:RGBLabel R="{Binding R}" G="{Binding G}" B="{Binding B}" Foreground="White" />
+        <uc:RGBLabel R="{Binding R}" G="{Binding G}" B="{Binding B}" />
+        <Button Content="Change Color" Click="ChangeColor_OnClick" Margin="0, 10, 0, 0" />
+    </StackPanel>
+</Window>
