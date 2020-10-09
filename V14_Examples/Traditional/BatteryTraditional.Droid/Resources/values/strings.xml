@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <string name="app_name">Battery Traditional</string>
+    <string name="battery_charge_level">Charge Level</string>
+    <string name="battery_state">State</string>
+    <string name="battery_power_source">Power Source</string>
+</resources>
