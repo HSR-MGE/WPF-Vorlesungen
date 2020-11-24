@@ -1,11 +1,10 @@
-﻿using System.Windows;
-using System.Windows.Media;
-
-namespace Vorlesung_11.Converter
+﻿namespace Vorlesung_11.Converter
 {
     using System;
     using System.Globalization;
+    using System.Windows;
     using System.Windows.Data;
+    using System.Windows.Media;
 
     public sealed class RGBConverter : IMultiValueConverter
     {
@@ -20,6 +19,7 @@ namespace Vorlesung_11.Converter
             var r = (byte)System.Convert.ToInt32(values[0]);
             var g = (byte)System.Convert.ToInt32(values[1]);
             var b = (byte)System.Convert.ToInt32(values[2]);
+
             return Color.FromRgb(r, g, b);
         }
 

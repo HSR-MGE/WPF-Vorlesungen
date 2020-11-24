@@ -7,16 +7,6 @@
 
     public partial class MainWindow : Window
     {
-        public IUser User { get; }
-
-        public ObservableCollection<IUser> Users { get; }
-
-        public IUser SelectedUser { get; set; }
-
-        public int SelectedUserIndex { get; set; }
-
-        public string SelectedUserName { get; set; }
-
         public MainWindow()
         {
             InitializeComponent();
@@ -27,10 +17,26 @@
             this.DataContext = this;
         }
 
+        #region Properties for Bindings
+
+        public IUser User { get; }
+
+        public ObservableCollection<IUser> Users { get; }
+
+        public IUser SelectedUser { get; set; }
+
+        public int SelectedUserIndex { get; set; }
+
+        public string SelectedUserName { get; set; }
+
+        #endregion
+
+        #region Private Helper Methods
+
         private static IUser CreateUser()
         {
             //return new User();
-            //return new UserWithINPFC();
+            //return new UserWithINPC();
             return new UserWithBase();
         }
 
@@ -60,5 +66,7 @@
         {
             Users.Add(User);
         }
+
+        #endregion
     }
 }

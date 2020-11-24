@@ -2,7 +2,7 @@
 
 namespace Vorlesung_11.Model
 {
-    public class UserWithINPFC : IUser, INotifyPropertyChanged
+    public class UserWithINPC : IUser, INotifyPropertyChanged
     {
         private string _firstName = "Thomas";
         private string _lastName = "Kaelin";

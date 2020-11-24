@@ -23,5 +23,4 @@
             PropertyChanged?.Invoke(this, eventArgs);
         }
     }
-
 }
