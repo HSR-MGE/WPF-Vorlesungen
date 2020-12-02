@@ -3,16 +3,18 @@
     using Vorlesung_12.Infrastructure;
     using Vorlesung_12.Model;
 
-    public class UserViewModelB : BindableBase
+    public class UserViewModelPierced : BindableBase
     {
         private IUser _user;
 
-        public UserViewModelB(IUser user)
+        public UserViewModelPierced(IUser user)
         {
             User = user;
             DecreaseAgeCommand = new RelayCommand(OnDecreaseAge, CanDecreaseAge);
             IncreaseAgeCommand = new RelayCommand(OnIncreaseAge, CanIncreaseAge);
         }
+
+        #region Properties for Bindings
 
         public IUser User
         {
@@ -20,9 +22,15 @@
             private set => SetProperty(ref _user, value);
         }
 
+        #endregion
+
+        #region Commands for Bindings
+
         public RelayCommand DecreaseAgeCommand { get; }
 
         public RelayCommand IncreaseAgeCommand { get; }
+
+        #endregion
 
         #region Private Methods
 

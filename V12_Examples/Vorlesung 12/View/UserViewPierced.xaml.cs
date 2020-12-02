@@ -5,13 +5,13 @@
     using Vorlesung_12.Model;
     using Vorlesung_12.ViewModel;
 
-    public partial class UserViewB : Window
+    public partial class UserViewPierced : Window
     {
-        public UserViewB(IUser user)
+        public UserViewPierced(IUser user)
         {
             InitializeComponent();
 
-            DataContext = new UserViewModelB(user);
+            DataContext = new UserViewModelPierced(user);
         }
     }
 }

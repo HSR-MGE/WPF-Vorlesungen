@@ -7,8 +7,8 @@
     {
         private static User User { get; } = new User { FirstName = "Thomas", LastName = "Kaelin", Age = 36 };
 
-        public static UserViewModelA ViewModelA { get; } = new UserViewModelA(User);
+        public static UserViewModelClassic Classic { get; } = new UserViewModelClassic(User);
 
-        public static UserViewModelB ViewModelB { get; } = new UserViewModelB(User);
+        public static UserViewModelPierced Pierced { get; } = new UserViewModelPierced(User);
     }
 }

@@ -11,11 +11,11 @@
         {
             base.OnStartup(e);
 
-            SetupForViewModelA();
-            //SetupForViewModelB();
+            SetupForClassic();
+            //SetupForPierced();
         }
 
-        private void SetupForViewModelA()
+        private void SetupForClassic()
         {
             var user = new User
             {
@@ -24,11 +24,11 @@
                 Age = 36
             };
 
-            MainWindow = new UserViewA(user);
+            MainWindow = new UserViewClassic(user);
             MainWindow.Show();
         }
 
-        private void SetupForViewModelB()
+        private void SetupForPierced()
         {
             var user = new UserWithBase
             {
@@ -37,7 +37,7 @@
                 Age = 36
             };
 
-            MainWindow = new UserViewB(user);
+            MainWindow = new UserViewPierced(user);
             MainWindow.Show();
         }
     }

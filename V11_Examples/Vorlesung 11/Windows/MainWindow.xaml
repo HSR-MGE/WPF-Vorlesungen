@@ -10,7 +10,8 @@
         d:DataContext="{d:DesignInstance Type=windows:MainWindow, IsDesignTimeCreatable=True}"
         Title="Data Binding"
         Height="450"
-        Width="420">
+        Width="420"
+        WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <model:User x:Key="ResUser" />

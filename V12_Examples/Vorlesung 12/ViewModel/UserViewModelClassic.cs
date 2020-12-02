@@ -3,13 +3,13 @@
     using Vorlesung_12.Infrastructure;
     using Vorlesung_12.Model;
 
-    public class UserViewModelA : BindableBase
+    public class UserViewModelClassic : BindableBase
     {
         private string _firstName;
         private string _lastName;
         private int _age;
 
-        public UserViewModelA(IUser user)
+        public UserViewModelClassic(IUser user)
         {
             FirstName = user.FirstName;
             LastName = user.LastName;
@@ -17,6 +17,8 @@
             DecreaseAgeCommand = new RelayCommand(OnDecreaseAge, CanDecreaseAge);
             IncreaseAgeCommand = new RelayCommand(OnIncreaseAge, CanIncreaseAge);
         }
+
+        #region Properties for Bindings
 
         public string FirstName
         {
@@ -58,9 +60,15 @@
 
         public string FormattedAge => $"{_age} Jahre";
 
+        #endregion
+
+        #region Commands for Bindings
+
         public RelayCommand DecreaseAgeCommand { get; }
 
         public RelayCommand IncreaseAgeCommand { get; }
+
+        #endregion
 
         #region Private Methods
 
